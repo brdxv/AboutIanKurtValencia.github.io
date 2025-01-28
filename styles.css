@@ -1,0 +1,242 @@
+@font-face {
+    src: url(Resources/font/);
+    font-family: 'aeoniktrial-regular';
+}
+
+@font-face {
+    src: url(Resources/font/aeoniktrial-light.otf);
+    font-family: 'aeoniktrial-light';
+}
+
+
+h1{
+    font-family: 'aeoniktrial-light';
+    color: #222222;
+    text-align: left; /* Aligns text horizontally (center, left, or right) */
+    padding-top: 20px;  /* Adjust spacing inside the container */
+    margin-left: 70px;  /* Adjust spacing outside the container */
+}
+
+.Hello{
+    font-size: 200px;
+    font-family: 'aeoniktrial-light';
+    font-weight: lighter;
+    position: absolute;
+    right: 0%;
+    bottom:0%;
+    left: 20%;
+    top: 15%;
+}
+
+h5{
+    font-size: 18px;
+    font-family: 'aeoniktrial-light';
+    font-weight: light;
+    position: absolute;
+    right: 0%;
+    bottom:0%;
+    left: 20.7%;
+    top: 51.5%;
+}
+
+
+p{
+    font-family: 'aeoniktrial-regular';
+}
+
+body{
+
+    background-color: #ffffff;
+
+
+}
+
+.freeze-text-1, .freeze-text-2, .freeze-text-3, .freeze-text-4, .freeze-text-5 {
+    position: fixed;  /* Keeps the text fixed while scrolling and zooming */
+    font-size: 18px;
+    transform: scale(1);  /* Prevent scaling during zoom */
+
+}
+/* Freeze the text and place it */
+.freeze-text-1 {
+    position: fixed;
+    top: 0%;  /* Place it at 5% from the top of the page */
+    left: 5%; /* 15% from the left of the page */
+    text-decoration: none;
+    font-size: 18px;   /* Adjust font size as needed */
+    transform: scale(1);
+    transition: transform 0.3s ease;  /* Smooth transition for moving the text */
+    
+}
+
+/* Add the hover effect */
+.freeze-text-1:hover {
+    transform: translateX(-10px); /* Move text slightly to the left */
+}
+
+/* Add arrow symbol when hovered */
+.freeze-text-1::after {
+    content: "";             /* No content initially */
+    display: inline-block;
+    margin-left: 0px;        /* Space between text and the symbol */
+    opacity: 0;              /* Initially the arrow is invisible */
+    transform: scale(0);     /* Initially scaled to 0 (invisible) */
+    transform-origin: bottom left; /* Make the arrow scale from the lower-left corner */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and scale */
+}
+
+/* When hovered, display and scale the arrow */
+.freeze-text-1:hover::after {
+    content: "🡭";          /* Symbol to display on hover */
+    opacity: 1;            /* Make the arrow visible */
+    transform: scale(1);     /* Scale the arrow to its normal size */
+}
+
+
+
+.freeze-text-2 {
+    position: fixed;
+    top: 0%;  /* Place it at 30% from the top of the page */
+    left: 10%; /* Keep it in the same horizontal place */
+    text-decoration: none;
+    font-size: 18px;   /* Adjust font size as needed */
+    transition: transform 0.3s ease;  /* Smooth transition for moving the text */
+}
+
+/* Add the hover effect */
+.freeze-text-2:hover {
+    transform: translateX(-10px); /* Move text slightly to the left */
+}
+
+/* Add arrow symbol when hovered */
+.freeze-text-2::after {
+    content: "";             /* No content initially */
+    display: inline-block;
+    margin-left: 0px;        /* Space between text and the symbol */
+    opacity: 0;              /* Initially the arrow is invisible */
+    transform: scale(0);     /* Initially scaled to 0 (invisible) */
+    transform-origin: bottom left; /* Make the arrow scale from the lower-left corner */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and scale */
+}
+
+/* When hovered, display and scale the arrow */
+.freeze-text-2:hover::after {
+    content: "🡭";          /* Symbol to display on hover */
+    opacity: 1;            /* Make the arrow visible */
+    transform: scale(1);     /* Scale the arrow to its normal size */
+}
+
+.freeze-text-3 {
+    position: fixed;
+    top: 0%;  /* Place it at 50% from the top of the page */
+    left: 17%; /* Same left position */
+    text-decoration: none;
+    font-size: 18px;   /* Adjust font size as needed */
+    transition: transform 0.3s ease;  /* Smooth transition for moving the text */
+}
+
+
+/* Add the hover effect */
+.freeze-text-3:hover {
+    transform: translateX(-10px); /* Move text slightly to the left */
+}
+
+/* Add arrow symbol when hovered */
+.freeze-text-3::after {
+    content: "";             /* No content initially */
+    display: inline-block;
+    margin-left: 0px;        /* Space between text and the symbol */
+    opacity: 0;              /* Initially the arrow is invisible */
+    transform: scale(0);     /* Initially scaled to 0 (invisible) */
+    transform-origin: bottom left; /* Make the arrow scale from the lower-left corner */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and scale */
+}
+
+/* When hovered, display and scale the arrow */
+.freeze-text-3:hover::after {
+    content: "🡭";          /* Symbol to display on hover */
+    opacity: 1;            /* Make the arrow visible */
+    transform: scale(1);     /* Scale the arrow to its normal size */
+}
+
+.freeze-text-4{
+    position: fixed;
+    top: 0%;  /* Place it at 50% from the top of the page */
+    left: 24.7%; /* Same left position */
+    text-decoration: none;
+    font-size: 18px;   /* Adjust font size as needed */
+    transition: transform 0.3s ease;  /* Smooth transition for moving the text */
+}
+
+
+/* Add the hover effect */
+.freeze-text-4:hover {
+    transform: translateX(-10px); /* Move text slightly to the left */
+}
+
+/* Add arrow symbol when hovered */
+.freeze-text-4::after {
+    content: "";             /* No content initially */
+    display: inline-block;
+    margin-left: 0px;        /* Space between text and the symbol */
+    opacity: 0;              /* Initially the arrow is invisible */
+    transform: scale(0);     /* Initially scaled to 0 (invisible) */
+    transform-origin: bottom left; /* Make the arrow scale from the lower-left corner */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and scale */
+}
+
+/* When hovered, display and scale the arrow */
+.freeze-text-4:hover::after {
+    content: "🡭";          /* Symbol to display on hover */
+    opacity: 1;            /* Make the arrow visible */
+    transform: scale(1);     /* Scale the arrow to its normal size */
+}
+
+.freeze-text-5{
+    position: fixed;
+    top: 0%;  /* Place it at 50% from the top of the page */
+    left: 32.3%; /* Same left position */
+    text-decoration: none;
+    font-size: 18px;   /* Adjust font size as needed */
+    transition: transform 0.3s ease;  /* Smooth transition for moving the text */
+}
+
+
+/* Add the hover effect */
+.freeze-text-5:hover {
+    transform: translateX(-10px); /* Move text slightly to the left */
+}
+
+/* Add arrow symbol when hovered */
+.freeze-text-5::after {
+    content: "";             /* No content initially */
+    display: inline-block;
+    margin-left: 0px;        /* Space between text and the symbol */
+    opacity: 0;              /* Initially the arrow is invisible */
+    transform: scale(0);     /* Initially scaled to 0 (invisible) */
+    transform-origin: bottom left; /* Make the arrow scale from the lower-left corner */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and scale */
+}
+
+/* When hovered, display and scale the arrow */
+.freeze-text-5:hover::after {
+    content: "🡭";          /* Symbol to display on hover */
+    opacity: 1;            /* Make the arrow visible */
+    transform: scale(1);     /* Scale the arrow to its normal size */
+}
+
+
+
+#image1{
+    position: absolute; /* Keeps the image fixed in place */
+    bottom: -10vh; /* Distance from the bottom is 10% of the viewport height */
+    right: 4vw; /* Distance from the right is 10% of the viewport width */
+    width: 55vw; /* Width is 10% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+
+}
+
+.about_ul{
+
+    text-decoration: none;
+}
