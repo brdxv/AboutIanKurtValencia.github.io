@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html>
 
+    <head>
         <title>Home Page | Ian's Personal Website</title>
         <link rel="stylesheet" href="styles.css">
-
-        <img src="Resources/Images/ianpfp1.png"
-        height="300" id="image1">
-
-        <a class= "about_ul" href="About.html">
-        <h1 class="freeze-text-1" > About </h1>
-        </a>
-
-        <a class= "about_ul" class="hover-symbol" href="Childhood Memory.html">
-        <h1 class="freeze-text-2"> Childhood </h1>
-        </a>
-
-        <a class= "about_ul" href="Childhood Memory.html">
-        <h1 class="freeze-text-3" class="hover-symbol"> My Hobbies </h1>
-        </a>
-
-        <a class= "about_ul" href="Aspirations.html">
-        <h1 class="freeze-text-4" class="hover-symbol"> Aspirations </h1>
-        </a>
-            
-        <a class= "about_ul" href="Aspirations.html">
-        <h1 class="freeze-text-5" class="hover-symbol"> Dreams Ahead </h1>
-        </a>
-
     </head>
 
+    <body>
+        <img src="Resources/Images/ianpfp1.png" height="300" id="image1">
 
-        <body>
-            <div><h2 class = "Hello" >
-                Hello
-            </h2>
-        </div>
+        <a class="about_ul" href="Secondary Pages/About.html">
+            <h1 class="freeze-text-1"> About </h1>
+        </a>
+
+        <a class="about_ul" href="Childhood Memory.html">
+            <h1 class="freeze-text-2"> Childhood </h1>
+        </a>
+
+        <a class="about_ul" href="Childhood Memory.html">
+            <h1 class="freeze-text-3"> My Hobbies </h1>
+        </a>
+
+        <a class="about_ul" href="Aspirations.html">
+            <h1 class="freeze-text-4"> Aspirations </h1>
+        </a>
+
+        <a class="about_ul" href="Aspirations.html">
+            <h1 class="freeze-text-5"> Dreams Ahead </h1>
+        </a>
+
+        <div><h2 class="Hello"> Hello </h2></div>
         <h5> — It's Ian, A Computer Science Student</h5>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const helloElement = document.querySelector(".Hello");
+                const translations = [
+                    "Hello", "Hola", "Bonjour", "Ciao", "Hallo", "你好",
+                    "Hei", "Kumusta", "Aloha", "Saluton", "Mabuhay", "Здраво"
+                ];
+                let index = 0;
+                let interval;
 
-        </body>
+                function updateText() {
+                    index = (index + 1) % translations.length;
+                    helloElement.textContent = translations[index];
+                }
 
+                helloElement.addEventListener("mouseenter", function () {
+                    interval = setInterval(updateText, 500);
+                });
 
+                helloElement.addEventListener("mouseleave", function () {
+                    clearInterval(interval);
+                    helloElement.textContent = "Hello";
+                });
+            });
+        </script>
+    </body>
 </html>
