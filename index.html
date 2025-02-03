@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <title>Home Page | Ian's Personal Website</title>
         <link rel="stylesheet" href="styles.css">
@@ -13,19 +12,19 @@
             <h1 class="freeze-text-1"> About </h1>
         </a>
 
-        <a class="about_ul" href="Childhood Memory.html">
+        <a class="about_ul" href="Secondary Pages/Childhood.html">
             <h1 class="freeze-text-2"> Childhood </h1>
         </a>
 
-        <a class="about_ul" href="Childhood Memory.html">
+        <a class="about_ul" href="Secondary Pages/My Hobbies.html">
             <h1 class="freeze-text-3"> My Hobbies </h1>
         </a>
 
-        <a class="about_ul" href="Aspirations.html">
+        <a class="about_ul" href="Secondary Pages/Aspirations.html">
             <h1 class="freeze-text-4"> Aspirations </h1>
         </a>
 
-        <a class="about_ul" href="Aspirations.html">
+        <a class="about_ul" href="Secondary Pages/Dreams Ahead.html">
             <h1 class="freeze-text-5"> Dreams Ahead </h1>
         </a>
 
@@ -36,15 +35,24 @@
             document.addEventListener("DOMContentLoaded", function () {
                 const helloElement = document.querySelector(".Hello");
                 const translations = [
-                    "Hello", "Hola", "Bonjour", "Ciao", "Hallo", "你好",
-                    "Hei", "Kumusta", "Aloha", "Saluton", "Mabuhay", "Здраво"
+                    "Hello", "Hola", "Bonjour", "Ciao", "Hallo",
+                    "Hei", "Kumusta", "Aloha", "Saluton",
                 ];
                 let index = 0;
                 let interval;
 
                 function updateText() {
+                    const currentText = translations[index];
+                    helloElement.textContent = currentText;
+
+                    // Adjust font weight for "Здраво"
+                    if (currentText === "Здраво") {
+                        helloElement.style.fontWeight = "lighter";  // Thinner weight
+                    } else {
+                        helloElement.style.fontWeight = "normal";  // Reset to normal weight
+                    }
+
                     index = (index + 1) % translations.length;
-                    helloElement.textContent = translations[index];
                 }
 
                 helloElement.addEventListener("mouseenter", function () {
@@ -54,6 +62,7 @@
                 helloElement.addEventListener("mouseleave", function () {
                     clearInterval(interval);
                     helloElement.textContent = "Hello";
+                    helloElement.style.fontWeight = "normal"; // Reset font weight when not hovering
                 });
             });
         </script>

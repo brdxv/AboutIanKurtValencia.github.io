@@ -57,6 +57,9 @@ body{
     transform: scale(1);  /* Prevent scaling during zoom */
 
 }
+
+
+
 /* Freeze the text and place it */
 .freeze-text-1 {
     position: fixed;
